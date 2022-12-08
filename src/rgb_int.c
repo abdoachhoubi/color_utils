@@ -18,7 +18,7 @@ void *int_to_rgb(int c)
 
     rgb = (int *)malloc(3 * sizeof (int));
     if (!rgb){
-        ft_putendl_fd("\033[1;31Error: Couldn't allocate memory for the rgb array!\033[0m", 2);
+        ft_putendl_fd("\033[1;31mError: Couldn't allocate memory for the rgb array!\033[0m", 2);
         return (NULL);}
     if (valide_int(c))
     {
@@ -27,7 +27,7 @@ void *int_to_rgb(int c)
         rgb[0] = ((c - rgb[2]) / (256 * 256)) - rgb[1] / 256;
         return (rgb);
     }
-    ft_putendl_fd("\033[1;31Error: Decimal value is not valide\033[0m", 2);
+    ft_putendl_fd("\033[1;31mError: Decimal value is not valide\033[0m", 2);
     ft_putendl_fd("Note: The value should be greater than or equal to 0,", 1);
     ft_putendl_fd("and less than or equal to 16777215", 1);
     return (NULL);
